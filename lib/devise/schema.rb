@@ -19,7 +19,7 @@ module Devise
       include_email = !respond_to?(:authentication_keys) || self.authentication_keys.include?(:email)
 
       apply_devise_schema :email,              String, :default => default if include_email
-      apply_devise_schema :encrypted_password, String, :default => default, :limit => 128
+      apply_devise_schema :encrypted_password, String, :default => default
     end
 
     # Creates password salt for encryption support when using encryptors other
